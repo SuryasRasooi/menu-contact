@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ulumm-landing-page-2.firebaseapp.com/
+
+# Sitemaps
+Sitemap: https://ulumm-landing-page-2.firebaseapp.com/sitemap.xml
