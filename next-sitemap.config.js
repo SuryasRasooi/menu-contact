@@ -1,4 +1,4 @@
-const siteUrl = "https://ulumm-landing-page-2.firebaseapp.com/";
+const siteUrl = "https://suryasrasooi-8a0d7.firebaseapp.com/";
 
 module.exports = {
   siteUrl,

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ulumm-landing-page-2.firebaseapp.com/
+Host: https://suryasrasooi-8a0d7.firebaseapp.com/
 
 # Sitemaps
-Sitemap: https://ulumm-landing-page-2.firebaseapp.com/sitemap.xml
+Sitemap: https://suryasrasooi-8a0d7.firebaseapp.com/sitemap.xml
