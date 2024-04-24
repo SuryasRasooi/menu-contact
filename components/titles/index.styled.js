@@ -39,13 +39,13 @@ export const TitlesStyles = styled.div`
 
   @keyframes changeText {
     33% {
-      content: "search ALL homes";
+      content: "Special Meat Rices Dishes";
     }
     66% {
-      content: "complex searches";
+      content: "Veggie & Meat Curries";
     }
     100% {
-      content: "auto-schedule viewing";
+      content: "Kebabs & Samosas";
     }
   }
 

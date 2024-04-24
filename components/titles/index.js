@@ -71,7 +71,8 @@ export default function Titles({ animate, setAnimate }) {
           animate={"visible"}
           className={`ceo-text ${roboto.className}`}
         >
-          .GPT powereds.
+          Suryas Rasooi, is based on authentic adaption on Indian food, 
+with tasty health benefit
         </motion.h4>
         <motion.h1
           variants={titleTextVariants}
@@ -80,7 +81,7 @@ export default function Titles({ animate, setAnimate }) {
           animate={"visible"}
           className="title-text"
         >
-          ASK ANTHING HOME RELATED
+          We offer catering to upto 100 people, on site cooking and delivery
         </motion.h1>
         <motion.h2
           variants={brandTextVariants}
@@ -105,7 +106,7 @@ export default function Titles({ animate, setAnimate }) {
           className="join-button"
         >
           <div className="cont" onClick={() => handleModalShow()}>
-            Join Waitlist
+            Email us at suryasrasooi@mgmail.com
           </div>
         </motion.button>
 
