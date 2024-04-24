@@ -61,7 +61,7 @@ export default function Titles({ animate, setAnimate }) {
         >
          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
   <div>Meet</div>
-  <div><img className="img" src="/images/logo-white.png" /></div>
+  <div><img className="img" src="/images/Suryas-Rosooi-logo.png" /></div>
 </div>
         </motion.h1>
         <motion.h4
@@ -71,7 +71,7 @@ export default function Titles({ animate, setAnimate }) {
           animate={"visible"}
           className={`ceo-text ${roboto.className}`}
         >
-          .GPT powered.
+          .GPT powereds.
         </motion.h4>
         <motion.h1
           variants={titleTextVariants}

@@ -53,7 +53,7 @@ const Navbar = () => {
               <div className="nav-menu">
                 <Link href="/">
                   <img
-                    src="/images/logo-white.png"
+                    src="/images/Suryas-Rosooi-logo.png"
                     alt="Logo"
                     className="logo-fixed"
                   />
