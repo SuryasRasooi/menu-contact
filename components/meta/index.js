@@ -3,7 +3,7 @@ import Head from "next/head";
 const Meta = ({ title, description, image, url }) => (
   <Head>
     <title key="title">{title}</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/faviconsur.ico" />
     <meta name="robots" content="max-image-preview:large" />
     <meta charSet="utf-8" />
     <meta

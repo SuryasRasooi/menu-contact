@@ -6,10 +6,10 @@ const Home = () => {
   return (
     <AnimatePresence>
       <Meta
-        title="MagigPropAI"
-        description="Home sh*t made a lot easier"
+        title="Suryas Rasooi"
+        description="Tasty on a Another Level"
         url="https://magicpropai.com"
-        image="/favicon.png"
+        image="/faviconsur.png"
       />
       <HomePage />
     </AnimatePresence>
