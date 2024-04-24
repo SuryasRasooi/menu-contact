@@ -8,7 +8,7 @@ const Home = () => {
       <Meta
         title="Suryas Rasooi"
         description="Tasty on a Another Level"
-        url="https://magicpropai.com"
+        url="https://suryasrasooi.com"
         image="/faviconsur.png"
       />
       <HomePage />

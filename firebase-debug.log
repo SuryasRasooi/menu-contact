@@ -1,0 +1,78 @@
+[debug] [2024-04-24T09:40:52.083Z] ----------------------------------------------------------------------
+[debug] [2024-04-24T09:40:52.085Z] Command:       /Users/jitenpatel/.nvm/versions/node/v16.20.0/bin/node /Users/jitenpatel/.nvm/versions/node/v16.20.0/bin/firebase deploy
+[debug] [2024-04-24T09:40:52.086Z] CLI Version:   12.9.1
+[debug] [2024-04-24T09:40:52.086Z] Platform:      darwin
+[debug] [2024-04-24T09:40:52.086Z] Node Version:  v16.20.0
+[debug] [2024-04-24T09:40:52.087Z] Time:          Wed Apr 24 2024 10:40:52 GMT+0100 (British Summer Time)
+[debug] [2024-04-24T09:40:52.087Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-24T09:40:52.158Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-24T09:40:52.158Z] > authorizing via signed-in user (suryasrasooi@gmail.com)
+[debug] [2024-04-24T09:40:52.158Z] [iam] checking project suryasrasooi-8a0d7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-24T09:40:52.160Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/suryasrasooi-8a0d7:testIamPermissions [none]
+[debug] [2024-04-24T09:40:52.161Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/suryasrasooi-8a0d7:testIamPermissions x-goog-quota-user=projects/suryasrasooi-8a0d7
+[debug] [2024-04-24T09:40:52.161Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/suryasrasooi-8a0d7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-24T09:40:52.828Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/suryasrasooi-8a0d7:testIamPermissions 200
+[debug] [2024-04-24T09:40:52.829Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/suryasrasooi-8a0d7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-24T09:40:52.830Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/suryasrasooi-8a0d7 [none]
+[debug] [2024-04-24T09:40:53.097Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/suryasrasooi-8a0d7 200
+[debug] [2024-04-24T09:40:53.097Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/suryasrasooi-8a0d7 {"projectId":"suryasrasooi-8a0d7","projectNumber":"545722611135","displayName":"suryasrasooi","name":"projects/suryasrasooi-8a0d7","resources":{"hostingSite":"suryasrasooi-8a0d7"},"state":"ACTIVE","etag":"1_2d416165-5405-4f35-b9b8-3f906053a0c4"}
+[info] 
+[info] === Deploying to 'suryasrasooi-8a0d7'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-04-24T09:40:53.107Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/suryasrasooi-8a0d7/versions [none]
+[debug] [2024-04-24T09:40:53.107Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/suryasrasooi-8a0d7/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-04-24T09:40:54.117Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/suryasrasooi-8a0d7/versions 200
+[debug] [2024-04-24T09:40:54.118Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/suryasrasooi-8a0d7/versions {"name":"projects/545722611135/sites/suryasrasooi-8a0d7/versions/a025f362496d3133","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[suryasrasooi-8a0d7]: beginning deploy... 
+[info] i  hosting[suryasrasooi-8a0d7]: found 40 files in out 
+[debug] [2024-04-24T09:40:54.132Z] [hosting] uploading with 200 concurrency
+[debug] [2024-04-24T09:40:54.268Z] [hosting] hash cache [b3V0] stored for 40 files
+[debug] [2024-04-24T09:40:54.268Z] [hosting][hash queue][FINAL] {"max":127,"min":26,"avg":36.725,"active":0,"complete":40,"success":40,"errored":0,"retried":0,"total":40,"elapsed":133}
+[debug] [2024-04-24T09:40:54.269Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/545722611135/sites/suryasrasooi-8a0d7/versions/a025f362496d3133:populateFiles [none]
+[debug] [2024-04-24T09:40:54.269Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/545722611135/sites/suryasrasooi-8a0d7/versions/a025f362496d3133:populateFiles {"files":{"/404.html":"4cc2567d07e3bc0a48a5fea017fefcfa5fceff187e19530448412657ab465b9e","/robots.txt":"5bff3c8ddea4eb4089976d74c67ae9669e91e3877f27cbf252534fff869ca7a8","/sitemap-0.xml":"2ecc92f1ab17ba610105331314e3b699cd93253a259bdc7d3cea70011f56b217","/404/index.html":"4cc2567d07e3bc0a48a5fea017fefcfa5fceff187e19530448412657ab465b9e","/sitemap.xml":"c9dce856e9cee4753cdfc410c368ca6c112ba91c51868646bca1cba9c3ab4610","/_next/static/chunks/webpack-ee7e63bc15b31913.js":"40d50e35e5618f86c2f86bd3ba9ff6d0553e00093214cbaf23ccfc3f78f9ae3e","/index.html":"0606420f5022cbdb05ccc1c8c5980269ec1429a40aa4d2828ab97aaa27da4d9b","/_next/static/chunks/pages/_error-8353112a01355ec2.js":"2e49f49a804b59fb1242408c8617443cde7949a4dcc1aef00757f25b7d4f0d2e","/_next/static/chunks/pages/index-000b106880820fd7.js":"8bea5875bda4e7eb8697582b30421bbfa82c24341e9b6216b8e94501cf783868","/_next/static/css/75c5ca02c828ffa7.css":"84f3208f92f8f1f9c9266236323011916c1a2ad410ed9060ca863aa237615aec","/_next/static/h8XuLa514uvLq4uPX3AJ7/_buildManifest.js":"7ac75ecc85af25c050372a73e468e19047af1bff85ed9251bad5d73a44edb50a","/_next/static/h8XuLa514uvLq4uPX3AJ7/_ssgManifest.js":"5c126729f9831113842c425975615db312fa26d39f3a9e1baa47d4ad65ac2f90","/fonts/didot/Didot LT Std Bold/readme.html":"abbbb39c24f1fd121a32e594530dec07557dcb26d6afa2457b4c36dc3c360611","/fonts/didot/Didot Medium/readme.html":"abbbb39c24f1fd121a32e594530dec07557dcb26d6afa2457b4c36dc3c360611","/fonts/didot/didot-bold-italic/readme.html":"abbbb39c24f1fd121a32e594530dec07557dcb26d6afa2457b4c36dc3c360611","/fonts/didot/didot-italic/readme.html":"abbbb39c24f1fd121a32e594530dec07557dcb26d6afa2457b4c36dc3c360611","/fonts/didot/didot-regular/readme.html":"abbbb39c24f1fd121a32e594530dec07557dcb26d6afa2457b4c36dc3c360611","/images/favicon.png":"167aacb96a68a42d2cfeaad4ceae78ba8f93034be626541ab5fb0d616056c447","/images/faviconsur.png":"777e94c9f120d9e6fbce1b246e1320e6e0a4aceaac9905708a2684190229b3f7","/images/canvas.png":"e3fda35e85b00c5d5292f7689428b877f42f1c93ce58f71bd6ab9403e5add7e9","/images/logo-white.png":"8152016cf346399ae9dc4c66adf6d1ec73b23f9a8663942184309009c80fb9a3","/images/faviconsur.ico":"1103cff827e4e1a465626cc6b69e732201603aee8783645ede5a97b2a47a35fd","/favicon.ico":"d25c91af91cc3e1896a617e0f7d87f21dc098cca15510502bf0b9ba3c13efd2b","/fonts/didot/Didot LT Std Bold/Didot LT Std Bold.otf":"c51eb748487b112834664e2af1789f575dac2a6e487d1e12310b29cf0910dd94","/_next/static/media/1864ddf2dca1230f.p.otf":"8fe368b3a1b87d5b7e87d774e669facc888623e2ba1076bb4399ce0d5289ea70","/fonts/didot/Didot Medium/Didot Medium.ttf":"12b7c67f6d0e2da19f53e354d1c0016effc9ab0497b143acca278a36bdfa318a","/fonts/didot/didot-italic/font.otf":"8fe368b3a1b87d5b7e87d774e669facc888623e2ba1076bb4399ce0d5289ea70","/images/logo.png":"8e0876d65e1c1d681bed61b8630a45f56aab7ca52039f0db8419273ddfdba49e","/_next/static/chunks/main-5c8d48ade40fe7b4.js":"d451b172a7558b24895501ebb8640117728be4b0d6434e024fed0ea123d7ba29","/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js":"aba23275a3c1380bfc8d467fd921b0c209e7182dbdaa02611c3a496b0b3b34ec","/images/Suryas-Rosooi-logo.png":"767132c39f0e3b5f6edbff77e1e42255decc8ab3d1b3d9525ba9dbfaf5bd9304","/_next/static/chunks/framework-3b5a00d5d7e8d93b.js":"85750d08d1adf48f3e36b7cf82ec949380c9706ec45b7fb9cc89dca5cd4c9d86","/fonts/didot/didot-regular/font.ttf":"22d60ec6ac2f3e024940b40fc934ccd237233e40d5a8e5d1de02bad5c1108db2","/images/image4.jpeg":"4acf5b214a383aeea4bc543d2ccd0da47ff283049c2474612ad88ee3376aaa93","/_next/static/chunks/pages/_app-a45ef1c022eba84c.js":"40d0abfded32edd2f20a8035921110a23ac07d33709077e9d1573c7dd250f717","/images/image2.jpeg":"8a91220770586546359aef86e6a39ee509fd3a3bc85677bf7e03c3aa73e2f1ae","/images/image1.jpeg":"41a7cf57f7359a36b020c69036bd9f926db22afe3ebbf84f621bd75b2cd92cb4","/images/image3.jpeg":"821cd0204493ecf21fbecf11165a9f840298964b9b406348d937d9b99cfe7296","/fonts/didot/didot-bold-italic/font.ttf":"99c455020b7d830eb24c30028132536a724ac0846336b36ec3cef6fd98e5fd37","/images/background.png":"c205d7cff65eea4fba878003cd16b980929829512a4a596f4e6738acdca8904a"}}
+[debug] [2024-04-24T09:40:55.109Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/545722611135/sites/suryasrasooi-8a0d7/versions/a025f362496d3133:populateFiles 200
+[debug] [2024-04-24T09:40:55.109Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/545722611135/sites/suryasrasooi-8a0d7/versions/a025f362496d3133:populateFiles {"uploadRequiredHashes":["4cc2567d07e3bc0a48a5fea017fefcfa5fceff187e19530448412657ab465b9e","7ac75ecc85af25c050372a73e468e19047af1bff85ed9251bad5d73a44edb50a","8bea5875bda4e7eb8697582b30421bbfa82c24341e9b6216b8e94501cf783868","2ecc92f1ab17ba610105331314e3b699cd93253a259bdc7d3cea70011f56b217","0606420f5022cbdb05ccc1c8c5980269ec1429a40aa4d2828ab97aaa27da4d9b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files"}
+[debug] [2024-04-24T09:40:55.110Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/4cc2567d07e3bc0a48a5fea017fefcfa5fceff187e19530448412657ab465b9e [none]
+[debug] [2024-04-24T09:40:55.110Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/4cc2567d07e3bc0a48a5fea017fefcfa5fceff187e19530448412657ab465b9e [stream]
+[debug] [2024-04-24T09:40:55.111Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/7ac75ecc85af25c050372a73e468e19047af1bff85ed9251bad5d73a44edb50a [none]
+[debug] [2024-04-24T09:40:55.111Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/7ac75ecc85af25c050372a73e468e19047af1bff85ed9251bad5d73a44edb50a [stream]
+[debug] [2024-04-24T09:40:55.112Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/8bea5875bda4e7eb8697582b30421bbfa82c24341e9b6216b8e94501cf783868 [none]
+[debug] [2024-04-24T09:40:55.112Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/8bea5875bda4e7eb8697582b30421bbfa82c24341e9b6216b8e94501cf783868 [stream]
+[debug] [2024-04-24T09:40:55.113Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/2ecc92f1ab17ba610105331314e3b699cd93253a259bdc7d3cea70011f56b217 [none]
+[debug] [2024-04-24T09:40:55.113Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/2ecc92f1ab17ba610105331314e3b699cd93253a259bdc7d3cea70011f56b217 [stream]
+[debug] [2024-04-24T09:40:55.114Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/0606420f5022cbdb05ccc1c8c5980269ec1429a40aa4d2828ab97aaa27da4d9b [none]
+[debug] [2024-04-24T09:40:55.114Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/0606420f5022cbdb05ccc1c8c5980269ec1429a40aa4d2828ab97aaa27da4d9b [stream]
+[debug] [2024-04-24T09:40:55.115Z] [hosting][populate queue][FINAL] {"max":843,"min":843,"avg":843,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":848}
+[debug] [2024-04-24T09:40:55.115Z] [hosting] uploads queued: 5
+[debug] [2024-04-24T09:40:56.104Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/8bea5875bda4e7eb8697582b30421bbfa82c24341e9b6216b8e94501cf783868 200
+[debug] [2024-04-24T09:40:56.104Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/8bea5875bda4e7eb8697582b30421bbfa82c24341e9b6216b8e94501cf783868 [stream]
+[debug] [2024-04-24T09:40:56.116Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/7ac75ecc85af25c050372a73e468e19047af1bff85ed9251bad5d73a44edb50a 200
+[debug] [2024-04-24T09:40:56.116Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/7ac75ecc85af25c050372a73e468e19047af1bff85ed9251bad5d73a44edb50a [stream]
+[debug] [2024-04-24T09:40:56.123Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/2ecc92f1ab17ba610105331314e3b699cd93253a259bdc7d3cea70011f56b217 200
+[debug] [2024-04-24T09:40:56.123Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/2ecc92f1ab17ba610105331314e3b699cd93253a259bdc7d3cea70011f56b217 [stream]
+[debug] [2024-04-24T09:40:56.157Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/0606420f5022cbdb05ccc1c8c5980269ec1429a40aa4d2828ab97aaa27da4d9b 200
+[debug] [2024-04-24T09:40:56.157Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/0606420f5022cbdb05ccc1c8c5980269ec1429a40aa4d2828ab97aaa27da4d9b [stream]
+[debug] [2024-04-24T09:40:56.400Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/4cc2567d07e3bc0a48a5fea017fefcfa5fceff187e19530448412657ab465b9e 200
+[debug] [2024-04-24T09:40:56.400Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/suryasrasooi-8a0d7/versions/a025f362496d3133/files/4cc2567d07e3bc0a48a5fea017fefcfa5fceff187e19530448412657ab465b9e [stream]
+[debug] [2024-04-24T09:40:56.401Z] [hosting][upload queue][FINAL] {"max":1291,"min":994,"avg":1070.2,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":1292}
+[info] ✔  hosting[suryasrasooi-8a0d7]: file upload complete 
+[debug] [2024-04-24T09:40:56.401Z] [hosting] deploy completed after 2281ms
+[debug] [2024-04-24T09:40:56.402Z] [
+  {
+    "config": {
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "suryasrasooi-8a0d7"
+    },
+    "version": "projects/545722611135/sites/suryasrasooi-8a0d7/versions/a025f362496d3133"
+  }
+]
+[info] i  hosting[suryasrasooi-8a0d7]: finalizing version... 
+[debug] [2024-04-24T09:40:56.404Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/suryasrasooi-8a0d7/versions/a025f362496d3133 updateMask=status%2Cconfig
+[debug] [2024-04-24T09:40:56.404Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/suryasrasooi-8a0d7/versions/a025f362496d3133 {"status":"FINALIZED","config":{}}
