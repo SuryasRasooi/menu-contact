@@ -61,7 +61,7 @@ export const Component = styled(motion.div)`
             transform-style: preserve-3d;
             a {
               img {
-                height: 30px;
+                height: 100px;
               }
             }
           }

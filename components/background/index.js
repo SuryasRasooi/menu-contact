@@ -23,9 +23,7 @@ const editorCanvasVariant = {
 
 export default function Background() {
   return (
-    <BackgroundStyles
-    //   style="opacity: 1; background-color: rgb(0, 0, 0); transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-    >
+    <BackgroundStyles>
       <motion.div
         className="editor-canvas"
         variants={editorCanvasVariant}
@@ -36,7 +34,12 @@ export default function Background() {
           duration: 3,
           delay: 2,
         }}
-      ></motion.div>
+      >
+        {/* Render multiple images side by side */}
+        <img src="/images/image1.jpeg" alt="Image 1" style={{ marginRight: "10px" }} />
+        <img src="/images/image2.jpeg" alt="Image 2" style={{ marginRight: "10px" }} />
+        <img src="/images/image3.jpeg" alt="Image 3" />
+      </motion.div>
     </BackgroundStyles>
   );
 }

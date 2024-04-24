@@ -13,6 +13,7 @@ export const BackgroundStyles = styled.div`
   background-position: 50% 50%;
   background-size: cover;
   perspective: 2000px;
+
   .editor-canvas {
     position: relative;
     bottom: auto;
@@ -20,12 +21,6 @@ export const BackgroundStyles = styled.div`
     overflow: visible;
     width: 100%;
     height: 100%;
-    /* margin-top: 30px; */
-    background-image: url("/images/canvas.png");
-    background-position: 50% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
     backface-visibility: hidden;
     perspective: 2000px;
     transform: perspective(2000px) translate3d(0px, 0px, 52px);
@@ -33,6 +28,18 @@ export const BackgroundStyles = styled.div`
     -webkit-text-fill-color: inherit;
     object-fit: contain;
     transform-style: preserve-3d;
+
+    /* Additional styles for motion animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-right: 10px; /* Adjust margin between images */
+      max-width: 100%; /* Ensure images don't exceed container width */
+      height: auto; /* Maintain aspect ratio */
+    }
+
     @media (max-width: 1100px) {
       display: none;
     }
