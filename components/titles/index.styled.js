@@ -24,6 +24,10 @@ export const TitlesStyles = styled.div`
         max-width: 800px;
     }
 
+    * {
+        color: black;
+    }
+
     & > div {
         position: relative;
         height: fit-content;

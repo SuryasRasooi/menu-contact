@@ -10,9 +10,9 @@ export const WrapperDiv = styled(motion.div)`
     }
     .food-image {
         width: 100%;
-        height: 250px;
+        height: 290px;
         border-radius: 30px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        box-shadow: 11px 11px 15px 1px #000000a6;
     }
 
     @media only screen and (max-width: 480px) {

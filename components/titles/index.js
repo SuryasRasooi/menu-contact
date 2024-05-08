@@ -67,7 +67,13 @@ export default function Titles({ animate, setAnimate }) {
                             alignItems: "center",
                         }}
                     >
-                        <span>Meet</span>
+                        <span
+                            style={{
+                                color: "white",
+                            }}
+                        >
+                            Meet
+                        </span>
                         <div>
                             <img
                                 className="img"

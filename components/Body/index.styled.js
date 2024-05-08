@@ -35,8 +35,8 @@ export const Section2 = styled.div`
     width: 90%;
     margin: 150px auto 50px;
     padding: 50px 0px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: #eeeeee;
+    box-shadow: 0px 4px 10px 10px #05050536 inset;
 
     ul {
         list-style: none;
