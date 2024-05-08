@@ -7,3 +7,6 @@ export { default as Section } from "./section";
 export { default as LoadingScreen } from "./loading-screens";
 export { default as Modal } from "./modal";
 export { default as Footer } from "./footer";
+export { default as Header } from "./Header";
+export { default as Body } from "./Body";
+export { default as Footer2 } from "./Footer2";

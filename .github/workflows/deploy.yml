@@ -1,0 +1,85 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on:
+  workflow_dispatch:
+
+# on:
+#   push:
+#     branches: [ "dev" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        node-version: [14.21.3]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+       
+     - name: Use Node.js ${{ matrix.node-version }}
+       uses: actions/setup-node@v3
+       with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+  
+     - name: Install dependencies and build
+       run: |
+           ls -lrt
+           node -v
+           npm -v
+           npm i
+           CI=false npm run build:dev
+           pwd
+           ls -lrt
+           
+     - name: Executing remote copy commands using ssh key
+     
+       uses: appleboy/scp-action@master
+       env:
+            username: ubuntu
+            key: ${{ secrets.SSH_KEY }}
+            host: 13.43.15.231
+       with:
+            username: ubuntu
+            key: ${{ secrets.SSH_KEY }}
+            host: 13.43.15.231
+            source: "build/*"
+            target: /var/www/frontend_build
+     - name: Executing remote ssh commands using ssh key
+       uses: appleboy/ssh-action@master
+       with:
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          host: 13.43.15.231
+          script: |
+                  sudo systemctl restart nginx
+
+#      - name: Build
+#        run: npm run build:dev
+
+#      - run: npm test
+#      - name: Executing remote ssh commands using ssh key
+#        uses: appleboy/ssh-action@master
+#        with:
+#           username: ubuntu
+#           key: ${{ secrets.SSH_KEY }}
+#           host: 13.43.15.231
+#           script: |
+#             cd /home/ubuntu/homeknock_frontend
+#             git pull origin
+#             node -v
+#             npm -v
+#             npm i
+#             npm run build:dev
+#             cd /var/www/
+#             cp -r /home/runner/work/homeknock_frontend/homeknock_frontend/build/* .
+#             rm -rf html2
+  
