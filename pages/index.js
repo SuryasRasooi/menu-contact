@@ -3,17 +3,17 @@ import { useState } from "react";
 import { Meta, Home as HomePage, Modal } from "../components";
 
 const Home = () => {
-  return (
-    <AnimatePresence>
-      <Meta
-        title="Suryas Rasooi"
-        description="Tasty on a Another Level"
-        url="https://suryasrasooi.com"
-        image="/faviconsur.png"
-      />
-      <HomePage />
-    </AnimatePresence>
-  );
+    return (
+        <AnimatePresence>
+            <Meta
+                title="Suryas Rasooi"
+                description="Tasty on a Another Level"
+                url="https://suryasrasooi.com"
+                image="/favicon.ico"
+            />
+            <HomePage />
+        </AnimatePresence>
+    );
 };
 
 export default Home;

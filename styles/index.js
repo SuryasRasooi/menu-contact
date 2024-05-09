@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
         border: 2px solid var(--color-gray-100);
     }
     #__next{
-        background: #ffffff;
+        background: #d2d2d2;
     }
     .main-wrapper {
     width: 95%;

@@ -1,0 +1,59 @@
+name: Docker Image CI for Frontend
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - "dev"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          ref: 'dev'
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2 
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+        
+      - name: Determine Image Tag
+        id: determine-tag
+        run: echo "::set-output name=tag::$(if [ -n "$GITHUB_TAG" ]; then echo $GITHUB_TAG; else echo $GITHUB_RUN_NUMBER; fi)"
+
+      - name: Build, tag, and push image to Amazon ECR 🏷
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: "homeknock-web-app-dev"
+          IMAGE_TAG: ${{ steps.determine-tag.outputs.tag }}
+        run: |
+          docker build -f docker/dev/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker images
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          
+      - uses: actions/checkout@v2 
+      
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          host: 13.43.15.231
+          script: |
+            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ steps.login-ecr.outputs.registry }}
+            docker pull ${{ steps.login-ecr.outputs.registry }}/homeknock-web-app-dev:${{ steps.determine-tag.outputs.tag }}
+            docker stop homeknock-web && docker rm homeknock-web
+            docker run -id -p 3000:3000 --name homeknock-web --restart always ${{ steps.login-ecr.outputs.registry }}/homeknock-web-app-dev:${{ steps.determine-tag.outputs.tag }}
+            docker image prune -f --filter "dangling=true"
